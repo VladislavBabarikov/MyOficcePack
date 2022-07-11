@@ -20,9 +20,26 @@ namespace MyOficcePack
     /// </summary>
     public partial class MainWindow : Window
     {
+        private int FileNumber = 0;
         public MainWindow()
         {
             InitializeComponent();
+        }
+
+        private void CreateNewFile_Click(object sender, RoutedEventArgs e)
+        {
+            CreateFile();
+        }
+
+        private void CreateFile()
+        {
+            string NewName = "NewItem" + FileNumber;
+            FileNumber++;
+            MainTab.Items.Add(new TabItem
+            {
+                Header = "Новый файл",
+                Name = NewName
+            });
         }
     }
 }

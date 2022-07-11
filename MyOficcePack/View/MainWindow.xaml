@@ -5,8 +5,33 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:MyOficcePack"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="MOP" Height="600" Width="900">
     <Grid>
-        
+        <TabControl x:Name="MainTab">
+            <TabItem Header="Начало работы!">
+                <Grid Background="White">
+
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition/>
+                        <ColumnDefinition Width="4*"/>
+                    </Grid.ColumnDefinitions>
+
+                    <Grid  Margin="5 0 5 0" Grid.Column="0" VerticalAlignment="Center">
+                        <TextBox 
+                            Text="Добро пожаловать! Благодарю за использование приложения My Oficce Pack v 1.0" 
+                            TextWrapping="Wrap" 
+                            BorderBrush="{x:Null}" 
+                            IsEnabled="False" Background="Black" Foreground="White"/>
+                    </Grid>
+
+                    <Grid Grid.Column="1">
+                        <Grid MinHeight="200" MinWidth="400" HorizontalAlignment="Center" VerticalAlignment="Center">
+                            <Button x:Name="CreateNewFile" Click="CreateNewFile_Click"/>
+                        </Grid>
+                    </Grid>
+                </Grid>
+            </TabItem>
+        </TabControl>
+
     </Grid>
 </Window>
