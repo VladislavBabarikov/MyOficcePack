@@ -26,12 +26,36 @@
 
                     <Grid Grid.Column="1">
                         <Grid MinHeight="200" MinWidth="400" HorizontalAlignment="Center" VerticalAlignment="Center">
-                            <Button x:Name="CreateNewFile" Click="CreateNewFile_Click"/>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition/>
+                                <ColumnDefinition/>
+                            </Grid.ColumnDefinitions>
+                            <Button
+                                x:Name="CreateNewFile" Click="CreateNewFile_Click"
+                                Content="Txt"
+                                MaxHeight="30"
+                                MaxWidth="150" 
+                                MinHeight="30"
+                                MinWidth="150" 
+                                Margin="5,5,0,0" 
+                                HorizontalAlignment="Left" 
+                                VerticalAlignment="Top"
+                                />
+                            <Button
+                                x:Name="CreateNewFileWord"
+                                Content="Word"
+                                MaxHeight="30"
+                                MaxWidth="150" 
+                                MinHeight="30"
+                                MinWidth="150" 
+                                Margin="5,40,0,0" 
+                                HorizontalAlignment="Left" 
+                                VerticalAlignment="Top"
+                                />
                         </Grid>
                     </Grid>
                 </Grid>
             </TabItem>
         </TabControl>
-
     </Grid>
 </Window>

@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using MyOficcePack.View;
 
 namespace MyOficcePack
 {
@@ -20,7 +21,7 @@ namespace MyOficcePack
     /// </summary>
     public partial class MainWindow : Window
     {
-        private int FileNumber = 0;
+        private int FileNumber = new int();
         public MainWindow()
         {
             InitializeComponent();
@@ -33,12 +34,14 @@ namespace MyOficcePack
 
         private void CreateFile()
         {
+            TextDocument textDocument = new TextDocument();
             string NewName = "NewItem" + FileNumber;
             FileNumber++;
             MainTab.Items.Add(new TabItem
             {
-                Header = "Новый файл",
-                Name = NewName
+                Header = "Новый файл (.txt)",
+                Name = NewName,
+                Content = textDocument.Content
             });
         }
     }
